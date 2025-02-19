@@ -17,7 +17,7 @@ int main() {
     p1.printInfo();
 
     // Testing parameterized constructor
-    Passenger p2("P001", "John", "Doe", "123 Main St, Anytown", "john.doe@example.com");
+    Passenger p2("D001", "Jiyong", "Jeon", "6969 suka street", "jiyong_jeon@example.com");
     cout << "\nParameterized Constructor Test:" << endl;
     p2.printInfo();
 
@@ -27,11 +27,11 @@ int main() {
     p3.printInfo();
 
     // Testing mutators
-    p1.setId("P002");
-    p1.setFirstName("Jane");
-    p1.setLastName("Smith");
-    p1.setAddress("456 Oak St, Othertown");
-    p1.setEmail("jane.smith@example.com");
+    p1.setId("D002");
+    p1.setFirstName("Benjamin");
+    p1.setLastName("Gutman");
+    p1.setAddress("69 hak teuh street, gok town");
+    p1.setEmail("benjamin_gutman@example.com");
     cout << "\nMutator Test:" << endl;
     p1.printInfo();
 
