@@ -31,4 +31,5 @@ OBJS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Question\ 1 \
+Question\ 2 \
 
