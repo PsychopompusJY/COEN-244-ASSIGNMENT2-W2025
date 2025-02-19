@@ -6,7 +6,8 @@
  */
 
 #include <iostream>
-#include "Passenger.h"
+
+#include "../Question 2/Passenger.h"
 
 using namespace std;
 

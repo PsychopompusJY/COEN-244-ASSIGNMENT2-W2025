@@ -5,8 +5,9 @@
  *      Author: jiyongjeon
  */
 
+#include "../Question 2/Passenger.h"
+
 #include <iostream>
-#include "Passenger.h"
 
 using namespace std;
 
