@@ -21,7 +21,6 @@ Flight :: Flight (string flightId, string departureCity, string arrivalCity,Date
 	this-> departureCity = departureCity;
 	this-> arrivalCity = arrivalCity;
 	this-> duration = duration;
-
 }
 
 
@@ -86,6 +85,7 @@ void Flight :: printFlightInfo(){
 	departure.printDate();
 	cout << "Arrival: " << arrivalCity << endl;
 	cout << "Duration: " << duration << endl;
+	cout << "\n";
 }
 
 
