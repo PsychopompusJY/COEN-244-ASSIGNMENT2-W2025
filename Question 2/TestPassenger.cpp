@@ -5,39 +5,84 @@
  *      Author: jiyongjeon
  */
 
-#include <iostream>
-
-#include "../Question 2/Passenger.h"
-
-using namespace std;
-
-int main() {
-    // Testing default constructor
-    Passenger p1;
-    cout << "Default Constructor Test:" << endl;
-    p1.printInfo();
-
-    // Testing parameterized constructor
-    Passenger p2("D001", "Jiyong", "Jeon", "6969 suka street", "jiyong_jeon@example.com");
-    cout << "\nParameterized Constructor Test:" << endl;
-    p2.printInfo();
-
-    // Testing copy constructor
-    Passenger p3 = p2;
-    cout << "\nCopy Constructor Test:" << endl;
-    p3.printInfo();
-
-    // Testing mutators
-    p1.setId("D002");
-    p1.setFirstName("Benjamin");
-    p1.setLastName("Gutman");
-    p1.setAddress("69 hak teuh street, gok town");
-    p1.setEmail("benjamin_gutman@example.com");
-    cout << "\nMutator Test:" << endl;
-    p1.printInfo();
-
-    return 0;
-}
-
-
-
+//#include "Passenger.h"
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main() {
+//    // Test Data
+//    string id = "D001";
+//    string firstName = "Jiyong";
+//    string lastName = "Jeon";
+//    string address = "6969 suka street";
+//    string email = "jiyong_jeon@example.com";
+//
+//    // Default Constructor Test
+//    Passenger p1;
+//    cout << "Default Constructor Test:" << endl;
+//    p1.printInfo();
+//
+//    // Parameterized Constructor Test
+//    Passenger p2(id, firstName, lastName, address, email);
+//    cout << "\nParameterized Constructor Test:" << endl;
+//    p2.printInfo();
+//
+//    // Copy Constructor Test
+//    Passenger p3(p2);
+//    cout << "\nCopy Constructor Test:" << endl;
+//    p3.printInfo();
+//
+//    // Mutator Tests
+//    cout << "\nMutator Tests:" << endl;
+//    p1.setId(id);
+//    if (p1.getId() == id) {
+//        cout << "ID Test Passed" << endl;
+//    }
+//
+//    p1.setFirstName(firstName);
+//    if (p1.getFirstName() == firstName) {
+//        cout << "First Name Test Passed" << endl;
+//    }
+//
+//    p1.setLastName(lastName);
+//    if (p1.getLastName() == lastName) {
+//        cout << "Last Name Test Passed" << endl;
+//    }
+//
+//    p1.setAddress(address);
+//    if (p1.getAddress() == address) {
+//        cout << "Address Test Passed" << endl;
+//    }
+//
+//    p1.setEmail(email);
+//    if (p1.getEmail() == email) {
+//        cout << "Email Test Passed" << endl;
+//    }
+//
+//    // Verifying Copy Constructor Results
+//    cout << "\nVerifying Copy Constructor Results:" << endl;
+//    if (p2.getId() == p3.getId()) {
+//        cout << "Copy ID Test Passed" << endl;
+//    }
+//    if (p2.getFirstName() == p3.getFirstName()) {
+//        cout << "Copy First Name Test Passed" << endl;
+//    }
+//    if (p2.getLastName() == p3.getLastName()) {
+//        cout << "Copy Last Name Test Passed" << endl;
+//    }
+//    if (p2.getAddress() == p3.getAddress()) {
+//        cout << "Copy Address Test Passed" << endl;
+//    }
+//    if (p2.getEmail() == p3.getEmail()) {
+//        cout << "Copy Email Test Passed" << endl;
+//    }
+//
+//    // Final Output to Verify All Data
+//    cout << "\nFinal Passenger Info Verification:" << endl;
+//    p1.printInfo();
+//
+//    return 0;
+//}
+//
+//

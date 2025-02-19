@@ -5,7 +5,7 @@
  *      Author: jiyongjeon
  */
 
-#include "../Question 2/Passenger.h"
+#include "Passenger.h"
 
 #include <iostream>
 
