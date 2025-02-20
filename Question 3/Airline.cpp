@@ -19,11 +19,12 @@ void Airline::addFlight( Flight flight) {
     flights.push_back(flight);
 }
 
-// Removes a flight fr om the airline's flight list
+// Removes a flight from the airline's flight list
 void Airline::removeFlight(string flightId) {
 	for (int i = 0; i< flights.size(); i++){
         if (flights[i].getId() == flightId) {
             flights.erase(flights.begin() + i);// Erases the flight and updates the iterator
+            cout << "Flight " << flightId << " Removed" << endl;
             break;
         }
     }

@@ -113,6 +113,7 @@ void Flight:: removePassenger(string passengerId){
 		if (passengers[i].getId() == passengerId){
 			passengers.erase(passengers.begin() + i);
 			bookingDate.erase(bookingDate.begin() + i);
+			cout << "Passenger " << passengerId << " Removed";
 			break;
 		}
 	}

@@ -109,6 +109,7 @@ void Flight:: removePassenger(string passengerId){
 	for (int i = 0; i < passengers.size(); i++){
 		if (passengers[i].getId() == passengerId){
 			passengers.erase(passengers.begin() + i);
+			cout << "Passenger " << passengerId << " Removed";
 			break;
 		}
 	}
