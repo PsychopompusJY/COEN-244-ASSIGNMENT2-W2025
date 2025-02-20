@@ -19,47 +19,54 @@ Airline::Airline(const Airline& other) : companyName(other.companyName), headqua
 Airline::~Airline() {}
 
 // Adds a flight to the airline's flight list
-void Airline::addFlight(const Flight& flight) {
+void Airline::addFlight( Flight flight) {
     flights.push_back(flight);
 }
 
 // Removes a flight from the airline's list based on its ID
-void Airline::removeFlight(const string& flightId) {
-    vector<Flight>::iterator it = flights.begin();
-    while (it != flights.end()) {
-        if (it->getId() == flightId) {
-            it = flights.erase(it); // Erases the flight and updates the iterator
-        } else {
-            ++it;
+//void Airline::removeFlight(const string& flightId) {
+//    vector<Flight>::iterator it = flights.begin();
+//    while (it != flights.end()) {
+//        if (it->getId() == flightId) {
+//            it = flights.erase(it); // Erases the flight and updates the iterator
+//        } else {
+//            ++it;
+//        }
+//    }
+//}
+
+void Airline::removeFlight(string flightId) {
+	for (int i = 0; i< flights.size(); i++){
+        if (flights[i].getId() == flightId) {
+            flights.erase(flights.begin() + i);// Erases the flight and updates the iterator
+            break;
         }
     }
 }
 
+
 // Searches for a flight by ID and returns true if found in the list
-bool Airline::searchFlight(const string& flightId) const {
-    vector<Flight>::const_iterator it;
-    for (it = flights.begin(); it != flights.end(); ++it) {
-        if (it->getId() == flightId) {
-            return true;
-        }
+bool Airline::searchFlight(string flightId){
+   for (int i =0; i<flights.size(); i++){
+	   if (flights[i].getId() == flightId) {
+		   return true;
+       }
     }
     return false;
 }
 
 // Displays all flights in the airline's list
-void Airline::displayFlights() const {
-    vector<Flight>::const_iterator it;
-    for (it = flights.begin(); it != flights.end(); ++it) {
-        it->printFlightInfo();
+void Airline::displayFlights(){
+    for (int i = 0; i < flights.size(); i++) {
+        flights[i].printFlightInfo();
     }
 }
 
 // Displays flights that depart from and arrive at specified cities
-void Airline::displayFlightsFromTo(const string& from, const string& to) const {
-    vector<Flight>::const_iterator it;
-    for (it = flights.begin(); it != flights.end(); ++it) {
-        if (it->getDepartureCity() == from && it->getArrivalCity() == to) {
-            it->printFlightInfo();
+void Airline::displayFlightsFromTo(string from, string to){
+    for (int i  = 0; i < flights.size(); i++) {
+        if (flights[i].getDepartureCity() == from && flights[i].getArrivalCity() == to) {
+            flights[i].printFlightInfo();
         }
     }
 }

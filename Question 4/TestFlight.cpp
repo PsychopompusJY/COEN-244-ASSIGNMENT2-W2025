@@ -1,15 +1,12 @@
-///*
-// * TestFlight.cpp
-// *
-// *  Created on: Feb 13, 2025
-// *      Author: benjamin
-// */
-//
+////Benjamin Gutman 40315265
+////Jiyong Jeon 40314593
 //
 //#include "Flight.h"
-//#include "../Question 1/Date.h"
+//#include "Date.h"
 //
 //int main(){
+//
+//	//Setting variables used to test the class functions
 //	string Id = "CoenAir 7754";
 //	string departureCity = "Montreal";
 //	string arrivalCity = "Moscow";
@@ -18,14 +15,17 @@
 //	int year = 2025;
 //	int duration = 22;
 //	Date departure (day, month, year, 0,0,0);
-//	Flight flight1;
-//	Flight flight2(Id, departureCity, arrivalCity, departure, duration);
-//	Flight flight3(flight2);
 //	Passenger pass1("335477", "Benjamin", "Gutman", "243 Rue Saint Jacques", "Benjamin.Gutman@email.com");
 //	Passenger pass2("765498", "Jiyong", "Jeon", "553 6e Ave", "Jiyong.Jeon@email.com");
 //	Passenger pass3("445781", "Brianna", "Morrissette", "768 Maisonneuve", "Bri.Morr@.com");
 //
 //
+//	//Use all three constructors.
+//	Flight flight1;
+//	Flight flight2(Id, departureCity, arrivalCity, departure, duration);
+//	Flight flight3(flight2);
+//
+//	//Test the class mutators
 //	flight1.setId(Id);
 //	if (flight1.getId() == Id){
 //		cout << "Id test passed"<< endl;
@@ -49,6 +49,9 @@
 //		cout << "Duration Test Passed"<< endl;
 //	}
 //
+//
+//
+//	//Test the class copy constructor and the parameterized constructor
 //	if (flight2.getId() == flight3.getId()){
 //		cout << "Copy Id Test Passed"<< endl;
 //	}
@@ -61,21 +64,32 @@
 //		cout << "Copy Arrival City Test Passed"<< endl;
 //	}
 //
+//
+//	//Print both flight2 and flight 3 dates, must be verified by user
 //	flight2.getDeparture().printDate();
 //	flight3.getDeparture().printDate();
+//
+//
 //
 //	if (flight2.getDuration() == flight3.getDuration()){
 //			cout << "Copy Duration Test Passed"<< endl;
 //		}
 //
+//
+//	//Test printFlightInfo, must be verified by user
 //	flight1.printFlightInfo();
 //
+//
+//	//Test the functions associated with the passengers list
 //
 //	flight1.addPassenger(pass1);
 //	flight1.addPassenger(pass2);
 //	flight1.addPassenger(pass3);
 //
+//	//Tests the display passengers before removePassenger is called
 //	flight1.displayPassengers();
+//
+//	//Search the passengers with a real and fake Id
 //	if (flight1.searchPassenger("765498") == true){
 //		cout << "Search Passenger Test Passed" << endl;
 //	}
@@ -84,13 +98,16 @@
 //		cout << "Search Passenger Fake ID Passed" << endl;
 //	}
 //
+//	//remove a passenger and check with the search to test if the passenger was properly removed
 //	flight1.removePassenger("765498");
 //	if (flight1.searchPassenger("765498") ==false){
 //		cout<< "Remove Passenger Test Passed" << endl;
 //	}
 //
+//
+//	//Display passengers now that one has been removed from the list, requires user verification
 //	flight1.displayPassengers();
 //
 //}
-
+//
 

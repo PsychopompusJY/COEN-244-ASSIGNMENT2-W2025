@@ -6,8 +6,8 @@
  */
 
 #include "Airline.h"
-#include "Flight.h"
-#include "Date.h"
+#include "../Question 1/Flight.h"
+#include "../Question 1/Date.h"
 #include <iostream>
 
 int main() {

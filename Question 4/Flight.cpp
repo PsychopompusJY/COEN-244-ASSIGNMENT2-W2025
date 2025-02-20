@@ -1,14 +1,12 @@
-///*
-// * Flight.cpp
-// *
-// *  Created on: Feb 12, 2025
-// *      Author: benjamin
-// */
+////Benjamin Gutman 40315265
+////Jiyong Jeon 40314593
 //
 //
 //#include "Flight.h"
 //
+////All constructors use initializer list for departure since class Date does not contain a default constructor
 //
+////Default constructor
 //Flight::Flight():departure(0,0,0,0,0,0){
 //	flightId = "";
 //	departureCity = "";
@@ -16,14 +14,17 @@
 //	duration = 0;
 //}
 //
+//
+////Parameterized constructor
 //Flight :: Flight (string flightId, string departureCity, string arrivalCity,Date departureDay, int duration): departure(departureDay){
 //	this-> flightId = flightId;
 //	this-> departureCity = departureCity;
 //	this-> arrivalCity = arrivalCity;
 //	this-> duration = duration;
+//
 //}
 //
-//
+////This is a copy constructor. This is used to copy one object onto the other
 //Flight :: Flight (const Flight& anotherFlight): departure(anotherFlight.departure){
 //	flightId = anotherFlight.flightId;
 //	departureCity = anotherFlight.departureCity;
@@ -32,10 +33,13 @@
 //}
 //
 //
+////Class destructor. Not very useful to create since there are no dynamically allocated items
 //Flight :: ~Flight(){
 //	cout << "Flight Destructor Executed" << endl;
 //}
 //
+//
+////class mutators
 //void Flight :: setId(string Id){
 //	flightId = Id;
 //}
@@ -56,6 +60,7 @@
 //	this-> duration = duration;
 //}
 //
+////Class Getters
 //string Flight :: getId(){
 //	return flightId;
 //}
@@ -79,21 +84,26 @@
 //
 //
 //
+////original member functions
+//
+////This function prints the information abut the flight stored in the class.
 //void Flight :: printFlightInfo(){
 //	cout << "Flight Id: " << flightId << endl;
 //	cout << "Departure: " << departureCity << " ";
 //	departure.printDate();
 //	cout << "Arrival: " << arrivalCity << endl;
 //	cout << "Duration: " << duration << endl;
-//	cout << "\n";
 //}
 //
+//// Question 4 member functions
 //
 //
+////adds a passenger to the passengers vector. Takes the input as a const reference so the passenger cannot be changed in the function
 //void Flight :: addPassenger(const Passenger& newPassenger){
 //	passengers.push_back(newPassenger);
 //}
 //
+////Removes a passenger from the passengers vector with the passenger Id as an input
 //void Flight:: removePassenger(string passengerId){
 //	for (int i = 0; i < passengers.size(); i++){
 //		if (passengers[i].getId() == passengerId){
@@ -103,6 +113,8 @@
 //	}
 //}
 //
+//
+////Takes a passenger id and returns true or false based on if the passenger exists
 //bool Flight :: searchPassenger(string passengerId){
 //	for (int i = 0; i < passengers.size(); i++){
 //		if (passengers[i].getId() == passengerId){
@@ -112,11 +124,13 @@
 //	return false;
 //}
 //
+//
+////prints out all the passengers and their data in a flight.
 //void Flight :: displayPassengers(){
 //	for (int i = 0; i < passengers.size(); i++){
 //		passengers[i].printInfo();
 //		cout << endl;
 //	}
 //}
-//
-//
+
+

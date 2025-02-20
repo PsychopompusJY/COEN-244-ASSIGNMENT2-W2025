@@ -1,9 +1,7 @@
-/*
- * Flight.h
- *
- *  Created on: Feb 12, 2025
- *      Author: benjamin
- */
+//Benjamin Gutman 40315265
+//Jiyong Jeon 40314593
+
+
 #ifndef FLIGHT_H_
 #define FLIGHT_H_
 

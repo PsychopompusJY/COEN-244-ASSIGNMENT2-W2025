@@ -10,7 +10,8 @@
 
 #include <vector>
 #include <string>
-#include "Flight.h"
+#include "../Question 1/Flight.h"
+using namespace std;
 
 class Airline {
 private:
@@ -29,19 +30,19 @@ public:
     ~Airline();
 
     // Adds a flight to the list of managed flights
-    void addFlight(const Flight& flight);
+    void addFlight( Flight flight);
 
     // Removes a flight from the list by flight ID
-    void removeFlight(const string& flightId);
+    void removeFlight( string flightId);
 
     // Searches for a flight by flight ID and returns true if found
-    bool searchFlight(const string& flightId) const;
+    bool searchFlight( string flightId);
 
     // Displays all flights in the list
-    void displayFlights() const;
+    void displayFlights();
 
     // Displays flights that match a specific departure and arrival city
-    void displayFlightsFromTo(const string& from, const string& to) const;
+    void displayFlightsFromTo( string from, string to);
 };
 
 #endif
