@@ -6,7 +6,7 @@
 
 #include <vector>
 #include <string>
-#include "../Question 1/Flight.h"
+#include "Flight.h"
 using namespace std;
 
 class Airline {

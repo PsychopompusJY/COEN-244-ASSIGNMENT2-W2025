@@ -1,7 +1,7 @@
 //Benjamin Gutman 40315265
 //Jiyong Jeon 40314593
 
-#include "../Question 1/Date.h"
+#include "Date.h"
 #include "Flight.h"
 
 int main(){
@@ -15,9 +15,6 @@ int main(){
 	int year = 2025;
 	int duration = 22;
 	Date departure (day, month, year, 0,0,0);
-	Flight flight1;
-	Flight flight2(Id, departureCity, arrivalCity, departure, duration);
-	Flight flight3(flight2);
 	Passenger pass1("335477", "Benjamin", "Gutman", "243 Rue Saint Jacques", "Benjamin.Gutman@email.com");
 	Passenger pass2("765498", "Jiyong", "Jeon", "553 6e Ave", "Jiyong.Jeon@email.com");
 	Passenger pass3("445781", "Brianna", "Morrissette", "768 Maisonneuve", "Bri.Morr@.com");
@@ -102,7 +99,12 @@ int main(){
 	flight1.addPassenger(pass2, bookingDate2);
 	flight1.addPassenger(pass3, bookingDate3);
 
+	cout << "\n\nNow Testing Passenger Functions: " << endl;
+
+	//Tests the display passengers before removePassenger is called
 	flight1.displayPassengers();
+
+	//Search the passengers with a real and fake Id
 	if (flight1.searchPassenger("765498") == true){
 		cout << "Search Passenger Test Passed" << endl;
 	}
@@ -116,8 +118,10 @@ int main(){
 		cout<< "Remove Passenger Test Passed" << endl;
 	}
 
+	// Now display passengers after one was removed
 	flight1.displayPassengers();
 
+	flight1.printFlightInfo();
 }
 
 

@@ -103,8 +103,12 @@ int main(){
 	flight1.addPassenger(pass2);
 	flight1.addPassenger(pass3);
 
+
+	cout << "\n\nNow Testing Passenger Functions: " << endl;
 	//Tests the display passengers before removePassenger is called
+
 	flight1.displayPassengers();
+
 
 	//Search the passengers with a real and fake Id
 	if (flight1.searchPassenger("765498") == true){
@@ -131,6 +135,7 @@ int main(){
 	//Display passengers now that one has been removed from the list, requires user verification
 	flight1.displayPassengers();
 
+	flight1.printFlightInfo();
 }
 
 

@@ -11,7 +11,7 @@ int main() {
     string id = "D001";
     string firstName = "Jiyong";
     string lastName = "Jeon";
-    string address = "6969 suka street";
+    string address = "6854 Saint Catherines street";
     string email = "jiyong_jeon@example.com";
 
     // Default Constructor Test

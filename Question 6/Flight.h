@@ -8,8 +8,8 @@
 #include <vector>
 #include <string>
 
-#include "../Question 2/Passenger.h"
-#include "../Question 1/Date.h"
+#include "Passenger.h"
+#include "Date.h"
 using namespace std;
 
 class Flight{

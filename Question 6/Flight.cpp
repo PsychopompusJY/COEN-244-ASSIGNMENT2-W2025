@@ -86,13 +86,14 @@ int Flight :: getDuration(){
 
 //original member functions
 
-//This function prints the information abut the flight stored in the class.
+//This function prints the information abut the flight stored in the class. Now displays passengers on flight
 void Flight :: printFlightInfo(){
 	cout << "Flight Id: " << flightId << endl;
 	cout << "Departure: " << departureCity << " ";
 	departure.printDate();
 	cout << "Arrival: " << arrivalCity << endl;
 	cout << "Duration: " << duration << endl;
+	displayPassengers();
 }
 
 // Question 4 member functions
