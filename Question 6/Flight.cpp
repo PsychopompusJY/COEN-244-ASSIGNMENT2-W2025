@@ -6,11 +6,9 @@
  */
 
 
-#include "Flight.h"
+#include "../Question 6/Flight.h"
 
-//All constructors use initializer list for departure since class Date does not contain a default constructor
 
-//Default constructor
 Flight::Flight():departure(0,0,0,0,0,0){
 	flightId = "";
 	departureCity = "";
@@ -18,17 +16,14 @@ Flight::Flight():departure(0,0,0,0,0,0){
 	duration = 0;
 }
 
-
-//Parameterized constructor
 Flight :: Flight (string flightId, string departureCity, string arrivalCity,Date departureDay, int duration): departure(departureDay){
 	this-> flightId = flightId;
 	this-> departureCity = departureCity;
 	this-> arrivalCity = arrivalCity;
 	this-> duration = duration;
-
 }
 
-//This is a copy constructor. This is used to copy one object onto the other
+
 Flight :: Flight (const Flight& anotherFlight): departure(anotherFlight.departure){
 	flightId = anotherFlight.flightId;
 	departureCity = anotherFlight.departureCity;
@@ -37,13 +32,10 @@ Flight :: Flight (const Flight& anotherFlight): departure(anotherFlight.departur
 }
 
 
-//Class destructor. Not very useful to create sincde there are no dynamically allocated items
 Flight :: ~Flight(){
 	cout << "Flight Destructor Executed" << endl;
 }
 
-
-//class mustators
 void Flight :: setId(string Id){
 	flightId = Id;
 }
@@ -64,7 +56,6 @@ void Flight :: setDuration(int duration){
 	this-> duration = duration;
 }
 
-//Class Getters
 string Flight :: getId(){
 	return flightId;
 }
@@ -88,27 +79,48 @@ int Flight :: getDuration(){
 
 
 
-//original member functions
-
-//This function prints the information abut the flight stored in the class.
 void Flight :: printFlightInfo(){
 	cout << "Flight Id: " << flightId << endl;
 	cout << "Departure: " << departureCity << " ";
 	departure.printDate();
 	cout << "Arrival: " << arrivalCity << endl;
 	cout << "Duration: " << duration << endl;
+	cout << "\n";
 }
 
 
 
+void Flight :: addPassenger(const Passenger& newPassenger, const Date& newPassengerDate){
+	passengers.push_back(newPassenger);
+	bookingDate.push_back(newPassengerDate);
+}
 
+void Flight:: removePassenger(string passengerId){
+	for (int i = 0; i < passengers.size(); i++){
+		if (passengers[i].getId() == passengerId){
+			passengers.erase(passengers.begin() + i);
+			bookingDate.erase(bookingDate.begin() + i);
+			break;
+		}
+	}
+}
 
+bool Flight :: searchPassenger(string passengerId){
+	for (int i = 0; i < passengers.size(); i++){
+		if (passengers[i].getId() == passengerId){
+			return true;
+		}
+	}
+	return false;
+}
 
-
-
-
-
-
-
+void Flight :: displayPassengers(){
+	for (int i = 0; i < passengers.size(); i++){
+		passengers[i].printInfo();
+		cout << "Booking Date: ";
+		bookingDate[i].printDate();
+		cout << endl;
+	}
+}
 
 

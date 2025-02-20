@@ -1,0 +1,5 @@
+To add a booking date, we could add another vector to the Flight class. This vector would be updated each time a passenger is added and removed from a flight.
+This would require addPassenger and removePassenger updated. The addPassenger function will now take a Date object as an input and will add the Date object to the vector
+associated with booking dates. Since both vectors will always be updated at the same time, the index for each vector will correspond to the same person. The removePassenger
+function will now also remove the Date at the same index the Passenger was found in the passengers vector. The displayPassenger function could also be updated to display the 
+day each passngers booking was made on top of the other change made to include a booking date.
