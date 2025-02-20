@@ -37,7 +37,9 @@ int main() {
 
     // Remove a flight
     airline.removeFlight("CA7754");
-    cout << "Flight CA7754 removed." << endl;
+
+    //Try to remove a flight that does not exist anymore
+    airline.removeFlight("CA7754");
 
     // Try to find the removed flight
     if (!airline.searchFlight("CA7754")) {

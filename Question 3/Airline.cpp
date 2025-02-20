@@ -25,9 +25,10 @@ void Airline::removeFlight(string flightId) {
         if (flights[i].getId() == flightId) {
             flights.erase(flights.begin() + i);// Erases the flight and updates the iterator
             cout << "Flight " << flightId << " Removed" << endl;
-            break;
+            return;
         }
     }
+	cout << "Flight Does Not Exist" << endl;
 }
 
 

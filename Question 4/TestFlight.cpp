@@ -125,6 +125,11 @@ int main(){
 
 	//remove a passenger and check with the search to test if the passenger was properly removed
 	flight1.removePassenger("765498");
+
+	//Call remove when the passenger does not exist
+	flight1.removePassenger("765498");
+
+
 	if (flight1.searchPassenger("765498") ==false){
 		cout<< "Remove Passenger Test Passed" << endl;
 	} else {
