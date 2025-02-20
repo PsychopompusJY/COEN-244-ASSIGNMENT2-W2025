@@ -46,4 +46,4 @@ public:
     void printInfo() const;
 };
 
-#endif /* QUESTION_2_PASSENGER_H_ */
+#endif /* PASSENGER_H */
