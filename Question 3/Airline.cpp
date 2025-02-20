@@ -1,9 +1,5 @@
-/*
- * Airline.cpp
- *
- *  Created on: Feb 19, 2025
- *      Author: jiyongjeon
- */
+//Benjamin Gutman 40315265
+//Jiyong Jeon 40314593
 
 #include "Airline.h"
 #include <iostream>
@@ -23,18 +19,7 @@ void Airline::addFlight( Flight flight) {
     flights.push_back(flight);
 }
 
-// Removes a flight from the airline's list based on its ID
-//void Airline::removeFlight(const string& flightId) {
-//    vector<Flight>::iterator it = flights.begin();
-//    while (it != flights.end()) {
-//        if (it->getId() == flightId) {
-//            it = flights.erase(it); // Erases the flight and updates the iterator
-//        } else {
-//            ++it;
-//        }
-//    }
-//}
-
+// Removes a flight fr om the airline's flight list
 void Airline::removeFlight(string flightId) {
 	for (int i = 0; i< flights.size(); i++){
         if (flights[i].getId() == flightId) {

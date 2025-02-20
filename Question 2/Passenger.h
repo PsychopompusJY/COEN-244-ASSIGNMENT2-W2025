@@ -1,9 +1,5 @@
-/*
- * Passenger.h
- *
- *  Created on: Feb 18, 2025
- *      Author: jiyongjeon
- */
+////Benjamin Gutman 40315265
+////Jiyong Jeon 40314593
 
 #ifndef PASSENGER_H
 #define PASSENGER_H

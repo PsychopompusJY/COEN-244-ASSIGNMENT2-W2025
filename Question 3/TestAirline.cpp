@@ -1,13 +1,9 @@
-/*
- * TestAirline.cpp
- *
- *  Created on: Feb 19, 2025
- *      Author: jiyongjeon
- */
+//Benjamin Gutman 40315265
+//Jiyong Jeon 40314593
 
 #include "Airline.h"
-#include "../Question 1/Flight.h"
-#include "../Question 1/Date.h"
+#include "Flight.h"
+#include "Date.h"
 #include <iostream>
 
 int main() {

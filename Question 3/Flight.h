@@ -1,28 +1,25 @@
 //Benjamin Gutman 40315265
 //Jiyong Jeon 40314593
 
+
 #ifndef FLIGHT_H_
 #define FLIGHT_H_
 
 #include <iostream>
 #include <vector>
 #include <string>
-
-#include "../Question 2/Passenger.h"
-#include "../Question 1/Date.h"
+#include "Date.h"
 using namespace std;
 
 class Flight{
 private:
 
-	//Private Data Members
+	//Members of the class
 	string flightId;
 	string departureCity;
 	string arrivalCity;
 	Date departure;
 	int duration;
-	vector <Passenger> passengers;
-	vector <Date> bookingDate;
 
 public:
 
@@ -51,14 +48,6 @@ public:
 
 	//Member functions
 	void printFlightInfo();
-
-	//Question 4 functions
-
-	//manipulators of the passengers vector, now includes the booking date
-	void addPassenger(const Passenger&, const Date& newPassengerDate);
-	void removePassenger(string);
-	bool searchPassenger(string);
-	void displayPassengers();
 
 
 

@@ -1,9 +1,5 @@
-/*
- * Airline.h
- *
- *  Created on: Feb 19, 2025
- *      Author: jiyongjeon
- */
+//Benjamin Gutman 40315265
+//Jiyong Jeon 40314593
 
 #ifndef AIRLINE_H_
 #define AIRLINE_H_

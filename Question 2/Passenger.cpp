@@ -1,9 +1,5 @@
-/*
- * Passenger.cpp
- *
- *  Created on: Feb 18, 2025
- *      Author: jiyongjeon
- */
+////Benjamin Gutman 40315265
+////Jiyong Jeon 40314593
 
 #include "Passenger.h"
 
